@@ -10,6 +10,7 @@ namespace CSharpProjectDemo
     {
         static void Main(string[] args)
         {
+            Console.ReadKey();
         }
     }
 }
