@@ -16,6 +16,6 @@ namespace CSharpProjectDemo
         public const string SERIALIZED_FILE = "Serialize.xml";
         public const string TEST_FRUIT_FILE = "Test_Fruits.txt";
         public const string TEST_SERIALIZED_FILE = "Test_Serialize.xml";
-        public const string DIRECTORY_FOR_TESTS = @"C:\Users\1\source\repos\CSharpProjectDemo\CSharpProjectDemo\bin\Debug\";
+        //public const string DIRECTORY_FOR_TESTS = @"C:\Users\1\source\repos\CSharpProjectDemo\CSharpProjectDemo\bin\Debug\";
     }    
 }
