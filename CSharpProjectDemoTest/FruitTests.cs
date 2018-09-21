@@ -108,9 +108,9 @@ namespace CSharpProjectDemoTest
             Assert.AreEqual(fruit.Color, color);
         }
 
-        [TestCase("grape", "red", "pineapple", "yellow", -1)]
-        [TestCase("grape", "purple", "grape", "purple", 0)]
-        [TestCase("pineapple", "yellow", "grape", "purple", 1)]
+        [TestCase("grape", "red", "pineapple", "yellow", "first")]
+        [TestCase("grape", "purple", "grape", "purple", "equal")]
+        [TestCase("pineapple", "yellow", "grape", "purple", "second")]
         public void CompareTo_CompareByValue_True(string fruitName, string fruitColor, string otherName, string otherColor, int expected)
         {
             //Arrange
