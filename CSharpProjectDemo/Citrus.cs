@@ -21,7 +21,17 @@ namespace CSharpProjectDemo
         ///<summary>
         ///Gets or sets the content of vitamin C.
         ///</summary>
-        public double VitaminC { get; set; }
+        public double VitaminC
+        {
+            get
+            {
+                return vitaminC;
+            }
+            set
+            {
+                vitaminC = value;
+            }
+        }
 
         /// <summary>
         /// Default constructor without any parameters.
@@ -42,9 +52,9 @@ namespace CSharpProjectDemo
         /// <param name="vitamineC">
         /// The content of vitamin C in milligrams
         /// </param>
-        public Citrus(string Name, string Color, double vitamineC) : base(Name, Color)
+        public Citrus(string Name, string Color, double VitaminC) : base(Name, Color)
         {
-            VitaminC = vitaminC;
+            this.VitaminC = VitaminC;
         }
 
         /// <summary>
@@ -61,7 +71,7 @@ namespace CSharpProjectDemo
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                vitaminC = 0;
+                VitaminC = 0;
             }
         }
 
@@ -73,7 +83,7 @@ namespace CSharpProjectDemo
         /// </returns>
         public override void Output()
         {
-            Console.WriteLine(ToString());
+            Console.WriteLine(this);
         }
 
         /// <summary>
@@ -98,7 +108,7 @@ namespace CSharpProjectDemo
         {
             using (StreamWriter file = new StreamWriter(newFile))
             {
-                file.WriteLine(ToString());
+                file.WriteLine(this);
             }
         }
 
@@ -110,7 +120,7 @@ namespace CSharpProjectDemo
         /// </returns>
         public override string ToString()
         {
-            return string.Format("{0} The content of vitamin C - {1:0.00}mg.", base.ToString(), VitaminC);
+            return string.Format("{0} The content of vitamin C - {1}mg.", base.ToString(), VitaminC);
         }
     }
 }
